@@ -1,0 +1,12 @@
+header img { max-width: 250px; }
+.search-box input {
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    width: 200px;
+}
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 10px 15px !important;
+}
