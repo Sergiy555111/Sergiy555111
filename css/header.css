@@ -1,28 +1,29 @@
 header {
-    background-color: transparent;
     padding: 10px 0;
     border-top: 4px solid #1a252f;
 }
-
+.transparent-header {
+    background-color: transparent;
+}
+.solid-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
 .main-logo {
     max-width: 200px;
     height: auto;
 }
-
 .search-input {
     border: none;
-    border-bottom: 1px solid #4d3319;
     background: transparent;
-    color: #4d3319;
     outline: none;
     width: 150px;
     font-size: 14px;
+    border-bottom: 1px solid #4d3319;
 }
-
-.search-input::placeholder {
-    color: rgba(77, 51, 25, 0.7);
+.search-input.dark-search {
+    color: #4d3319;
 }
-
 .navbar-nav .nav-link {
     color: #4d3319 !important;
     font-weight: 700;
@@ -30,7 +31,6 @@ header {
     padding: 10px 15px !important;
     text-transform: uppercase;
 }
-
 .navbar-nav .nav-link:hover {
     color: #57a15a !important;
 }
