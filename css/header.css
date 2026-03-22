@@ -1,12 +1,36 @@
-header img { max-width: 250px; }
-.search-box input {
-    border: none;
-    border-bottom: 1px solid #333;
-    outline: none;
-    width: 200px;
+header {
+    background-color: transparent;
+    padding: 10px 0;
+    border-top: 4px solid #1a252f;
 }
+
+.main-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.search-input {
+    border: none;
+    border-bottom: 1px solid #4d3319;
+    background: transparent;
+    color: #4d3319;
+    outline: none;
+    width: 150px;
+    font-size: 14px;
+}
+
+.search-input::placeholder {
+    color: rgba(77, 51, 25, 0.7);
+}
+
 .navbar-nav .nav-link {
-    color: #333 !important;
-    font-weight: 500;
+    color: #4d3319 !important;
+    font-weight: 700;
+    font-size: 13px;
     padding: 10px 15px !important;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #57a15a !important;
 }
