@@ -137,3 +137,12 @@
     color: #8ab88e;
     margin: 0;
 }
+.footer-bottom small {
+    color: #ffffff !important;
+    opacity: 0.9;
+    font-size: 13px;
+}
+.products-icons {
+    background-color: #f7f9f8 !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+}
