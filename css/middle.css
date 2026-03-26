@@ -137,6 +137,15 @@
     color: #8ab88e;
     margin: 0;
 }
+.tomato-card a {
+    text-decoration: none;
+}
+.tomato-text a h6 {
+    transition: 0.3s;
+}
+.tomato-text a:hover h6 {
+    color: #3b4b40 !important;
+}
 .footer-bottom small {
     color: #ffffff !important;
     opacity: 0.9;
@@ -293,4 +302,92 @@
 .pdf-icon {
     height: 20px;
     margin-right: 10px;
+}
+
+.contact-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.contact-page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #3b4b40;
+}
+.contact-form label {
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    display: block;
+}
+.contact-input, .contact-select, .contact-textarea {
+    width: 100%;
+    border: 1px solid #e2e8e3;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+}
+.contact-input:focus, .contact-select:focus, .contact-textarea:focus {
+    border-color: #57a15a;
+    outline: none;
+    box-shadow: none;
+}
+.contact-textarea {
+    height: 228px;
+    resize: none;
+}
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.captcha-code {
+    font-family: serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 3px;
+}
+.captcha-input {
+    width: 100px;
+    border: 1px solid #e2e8e3;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+.btn-send {
+    background-color: #57a15a;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: 700;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.btn-send:hover {
+    background-color: #3b4b40;
+}
+.address-section {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.address-title {
+    color: #57a15a;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #57a15a;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.address-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+.address-text span {
+    color: #57a15a;
 }
