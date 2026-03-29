@@ -1,1 +1,69 @@
-1
+@media (max-width: 1024px) {
+    .hero-title { font-size: 36px; }
+    .product-title-main { font-size: 36px; }
+    .search-box { width: 100%; text-align: center; }
+    .navbar-collapse { background-color: #fcfdfc; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .nav-link { border-bottom: 1px solid #eef0ee; padding: 12px 0 !important; font-size: 16px; }
+    .nav-item:last-child .nav-link { border-bottom: none; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 28px; }
+    .product-title-sub { font-size: 24px; }
+    .section-title { font-size: 28px; }
+    .page-main-title { font-size: 26px; }
+    
+    .top-site-section { min-height: 400px; }
+    .hero-container { padding-top: 60px; }
+    
+    .footer-links { flex-direction: column; text-align: center; }
+    .footer-links li { margin: 10px 0; border-right: none !important; }
+    .social-icons { margin-top: 20px; text-align: center; justify-content: center; }
+    
+    .programs-white-box { padding: 20px 15px; }
+    .program-h { margin-top: 30px; text-align: center; }
+}
+
+@media (max-width: 640px) {
+    .hero-title { font-size: 24px; }
+    .btn-read-more { padding: 10px 25px; font-size: 14px; }
+    
+    .product-item { min-width: 50%; }
+    
+    .yield-highlight { flex-direction: column; text-align: center; font-size: 16px; }
+    .yield-icon-wrapper { margin-right: 0; margin-bottom: 15px; }
+    .divider-stars { text-align: center !important; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 20px; }
+    .section-title { font-size: 24px; }
+    .product-title-main { font-size: 28px; text-align: center; }
+    .product-title-sub { text-align: center; }
+    
+    .product-item { min-width: 100%; }
+    
+    .contact-form label { font-size: 12px; }
+    .activity-img { height: 80px; }
+    
+    .char-section h6 { max-width: 100%; text-align: center; margin-left: auto; margin-right: auto; }
+    .char-section .resistance-title { text-align: center; }
+    .characteristics-title { display: block; text-align: center; margin: 0 auto 25px auto; }
+    
+    .captcha-container { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .btn-send { width: 100%; margin-top: 15px; }
+}
+
+@media (max-width: 400px) {
+    .top-site-section { min-height: 350px; }
+    .product-title-sub { font-size: 20px; }
+    .search-input { width: 100%; }
+    .btn-download { width: 100%; }
+}
+
+@media (max-width: 320px) {
+    .hero-title { font-size: 18px; }
+    .product-title-main { font-size: 24px; }
+    .btn-read-more { padding: 8px 20px; font-size: 12px; }
+    .main-logo { max-height: 40px; }
+}
