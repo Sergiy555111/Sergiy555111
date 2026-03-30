@@ -69,7 +69,7 @@
     background-color: #fcfdfc;
 }
 .category-content {
-    background-color: #fffaf9;
+    background-color: #f4fce3;
 }
 .page-main-title {
     font-size: 32px;
@@ -389,4 +389,32 @@
 }
 .address-text span {
     color: #57a15a;
+}
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+}
+.banner-container img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer-main {
+    flex-shrink: 0;
 }
