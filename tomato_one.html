@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomato One - Agridera</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/middle.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body class="tomato-page-body">
     <header class="category-header">
@@ -41,64 +43,29 @@
     <main class="py-5 watermark-bg">
         <div class="container" style="position: relative; z-index: 2;">
             <div class="mb-4">
-                <a href="tomato.html" class="breadcrumb-link">&larr; Return to all tomatoes</a>
+                <a href="tomato.html" class="breadcrumb-link">&larr; Return to all products</a>
             </div>
             
-            <div class="row mt-4">
+            <div class="row mt-4" v-if="product && product.id">
                 <div class="col-md-7 pr-md-5">
-                    <h1 class="product-title-main">TAG 1002 (TAG 809)</h1>
-                    <h2 class="product-title-sub">Tomato Determinate<br>Red Standard Round</h2>
-                    
+                    <h1 class="product-title-main">{{ product.title }}</h1>
+                    <h2 class="product-title-sub">{{ product.short_text }}</h2>
                     <div class="divider-stars text-left mt-3 mb-4">★★★★★</div>
-
-                    <div class="yield-highlight">
-                        <div class="yield-icon-wrapper">
-                            <img src="images/yield_icon.png" alt="" class="img-fluid">
-                        </div>
-                        <span>Very high yield and<br>excellent fruits quality!</span>
-                    </div>
-
-                    <h5 class="characteristics-title mt-5">CHARACTERISTICS</h5>
-                    
+                    <h5 class="characteristics-title mt-5">DESCRIPTION</h5>
                     <div class="char-section mt-4">
-                        <h6 class="resistance-title">Resistance</h6>
-                        <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd;<br>IR: TYLCV</p>
-
-                        <h6 class="mt-4">Plant</h6>
-                        <ul>
-                            <li>Strong vigor that provides good leaf coverage.</li>
-                            <li>Very high productivity with good fruit setting.</li>
-                            <li>Early matured variety.</li>
-                        </ul>
-
-                        <h6 class="mt-4">Fruit</h6>
-                        <ul>
-                            <li>Long shelf life on plant and post harvest.</li>
-                            <li>Nice shiny attractive deep red color.</li>
-                            <li>Average fruit size: 140 – 160 grams.</li>
-                        </ul>
+                        <p style="font-size: 16px;">{{ product.desc }}</p>
                     </div>
                 </div>
                 
                 <div class="col-md-5 text-left mt-4 mt-md-0 char-section">
-                    <img src="images/tom_1002.png" alt="TAG 1002" class="img-fluid w-100 shadow-sm mb-1">
+                    <img :src="'img/' + product.image" alt="" class="img-fluid w-100 shadow-sm mb-3" style="border-radius: 8px;">
                     <div class="text-right">
-                        <a href="#" class="btn-download mt-2">
-                            <img src="images/pdf_icon.png" class="pdf-icon" alt="">
-                            Download PDF
+                        <a href="#" class="btn-download mt-2" @click.prevent="addToCart(product.id)" v-if="!btnVisible">
+                            Add to cart
                         </a>
-                    </div>
-
-                    <div class="mt-4">
-                        <h6>Cycle</h6>
-                        <ul>
-                            <li>Spring</li>
-                            <li>Fall</li>
-                            <li>Winter</li>
-                        </ul>
-
-                        <h6 class="mt-4">Color</h6>
-                        <p>Red</p>
+                        <a href="contact.html" class="btn-download mt-2" style="background-color: #3b4b40; color: white; border-color: #3b4b40;" v-if="btnVisible">
+                            Go to cart
+                        </a>
                     </div>
                 </div>
             </div>
