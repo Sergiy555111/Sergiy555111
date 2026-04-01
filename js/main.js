@@ -10,11 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 { id: 5, title: "Яблуко Чемпіон", short_text: "Велике та соковите", image: "apple5.jpg", desc: "Великі яблука з ніжним кисло-солодким смаком. М'якоть кремова і дуже соковита." }
             ],
             product: {},
-            btnVisible: 0
+            btnVisible: 0,
+            cart: [],
+            contactFields: {},
+            orderSubmitted: false
         },
         mounted: function() {
             this.getProduct();
             this.checkInCart();
+            this.getCart();
         },
         methods: {
             getProduct: function() {
@@ -30,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             },
             addToCart: function(id) {
-                var cart = [];
+                var cartStorage = [];
                 if(window.localStorage.getItem('cart')) {
-                    cart = window.localStorage.getItem('cart').split(',');
+                    cartStorage = window.localStorage.getItem('cart').split(',');
                 }
-                if(cart.indexOf(String(id)) == -1) {
-                    cart.push(id);
-                    window.localStorage.setItem('cart', cart.join());
+                if(cartStorage.indexOf(String(id)) == -1) {
+                    cartStorage.push(id);
+                    window.localStorage.setItem('cart', cartStorage.join(','));
                     this.btnVisible = 1;
                 }
             },
@@ -46,7 +50,43 @@ document.addEventListener('DOMContentLoaded', function () {
                         this.btnVisible = 1;
                     }
                 }
+            },
+            getCart: function() {
+                this.cart = [];
+                if(window.localStorage.getItem('cart')) {
+                    var cartStorage = window.localStorage.getItem('cart').split(',');
+                    for(var i in this.products) {
+                        if(cartStorage.indexOf(String(this.products[i].id)) !== -1) {
+                            this.cart.push(this.products[i]);
+                        }
+                    }
+                }
+            },
+            removeFromCart: function(id) {
+                this.cart = this.cart.filter(function(item) {
+                    return item.id !== id;
+                });
+                
+                var cartStorage = [];
+                if(window.localStorage.getItem('cart')) {
+                    cartStorage = window.localStorage.getItem('cart').split(',');
+                }
+                var index = cartStorage.indexOf(String(id));
+                if (index !== -1) {
+                    cartStorage.splice(index, 1);
+                }
+                
+                if (cartStorage.length > 0) {
+                    window.localStorage.setItem('cart', cartStorage.join(','));
+                } else {
+                    window.localStorage.removeItem('cart');
+                }
+            },
+            makeOrder: function() {
+                this.orderSubmitted = true;
+                this.cart = [];
+                window.localStorage.removeItem('cart');
             }
         }
     });
-}); 
+});
