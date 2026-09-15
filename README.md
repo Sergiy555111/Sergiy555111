@@ -23,12 +23,11 @@ Computer Science / Software Engineering Student. Passionate about problem-solvin
 
 ---
 
-### 📊 GitHub Stats
+### 📊 Activity & Repositories
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sergiy555111&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sergiy555111&layout=compact&theme=radical" alt="Top Languages" />
-</p>
+- 🔭 I’m currently working on student and web projects
+- 🌱 Learning algorithms, database design, and software engineering
+- ⚡ Fun fact: Ready to build and deploy clean code
 
 ---
 
